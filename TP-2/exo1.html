@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 1</title>
+</head>
+<body>
+
+    <!-- Créer une page HTML avec une image. Lorsque vous cliquez sur cette image elle pivote dans le sens des aiguilles 
+    d’une montre de 90°. -->
+    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" onclick="rotate(event)" id="img">
+
+    <script>
+        function rotate(event){
+            document.getElementById("img").style.transform = "rotate(90deg)";
+        }
+    </script>
+</body>
+</html>

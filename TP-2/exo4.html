@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 4</title>
+</head>
+<body onkeydown="touche(event);">
+
+    <!--    Créer une page HTML contenant une div de 50 px sur 50px avec un fond rose. Avec un event, faite en sorte de 
+            pouvoir déplacer la div avec les touches fléchées de votre clavier. 
+    -->
+   
+    <div style="width: 50px; height: 50px; background-color: pink; position: absolute; top: 20px; left: 20px;" id="carre"></div>
+
+
+    <script>
+            function touche(event){
+                var touche = event.keyCode;
+                var nom = String.fromCharCode(touche);
+
+            // haut
+            if(touche==37){
+                document.getElementById('carre').style.left = document.getElementById('carre').style.left.slice(0, -2) - 5 + "px";
+            }
+            // gauche
+            else if(touche==38){
+                document.getElementById('carre').style.top = document.getElementById('carre').style.top.slice(0, -2) - 5 + "px";
+            }
+
+            // droite
+            else if(touche==39){
+                document.getElementById('carre').style.left = +document.getElementById('carre').style.left.slice(0, -2) + 5 + "px";
+            }
+
+            // bas
+            else if(touche==40){
+                document.getElementById('carre').style.top = +document.getElementById('carre').style.top.slice(0, -2) + 5 + "px";
+            }
+            }
+
+
+
+    </script>
+</body>
+</html>

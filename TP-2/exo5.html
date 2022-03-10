@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 5</title>
+</head>
+<body onkeydown="touche(event);">
+
+    <!--    Créer une page HTML avec plusieurs images, au survol d’une image faites un zoom x3 sur cette image
+    -->
+   
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxXnC3fwMwkbIt3ejGRIw3NmbDyUtgS5g2jA&usqp=CAU" alt="" class="box">
+   <img src="https://www.notuxedo.com/wp-content/uploads/2015/05/la-gomera-canaries.jpg" alt="" class="box">
+
+    <script>
+        let box = document.getElementById("box");
+
+        box.addEventListener("mouseenter", function( event ) {
+        event.target.style.transform = "scale : 120%";
+        });
+
+    </script>
+</body>
+</html>

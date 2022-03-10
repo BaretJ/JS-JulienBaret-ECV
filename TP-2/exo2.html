@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 2</title>
+</head>
+<body>
+
+    <!-- Créer une page HTML avec une liste contenant des noms de ville. Au clic d’un élément de la liste, remonter l’
+élément en haut de la liste.     -->
+   
+<ul id="container">
+    <li id="first" onclick="getId(this)">Paris</li>
+    <li id="second" onclick="getId(this)">Bordeaux</li>
+    <li id="third" onclick="getId(this)">Nice</li>
+</ul>
+
+    <script>
+        document.getElementById('container').style.display = 'flex';
+        document.getElementById('container').style.flexDirection = 'column';
+
+        function getId(monId){
+            id=monId.id;
+
+            console.log(id);
+            document.getElementById("first").removeAttribute("style");
+            document.getElementById("second").removeAttribute("style");
+            document.getElementById("third").removeAttribute("style");
+
+            document.getElementById(id).style.order = "-4";
+        }
+    </script>
+</body>
+</html>

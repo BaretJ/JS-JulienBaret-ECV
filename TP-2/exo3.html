@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 3</title>
+</head>
+<body>
+
+    <!--    Créer une page HTML avec 2 images. Lorsque vous cliquez sur une des deux images, la largeur de l’image cliquée 
+            augmente de 20% de sa largeur actuelle et la largeur de l’autre image diminue de 20% de sa largeur actuelle. 
+            Attention : la largeur ne peut pas être négative.
+    -->
+   
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/220px-Square_-_black_simple.svg.png" id="first" onclick="transform(this)" style="width: 100px;">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Square_-_black_simple.svg/220px-Square_-_black_simple.svg.png" id="second" onclick="transform(this)" style="width: 100px;">
+
+    <script>
+        function transform(clickedElement){
+            const otherElement = clickedElement.id === "first" 
+            ? document.getElementById("second")
+            : document.getElementById("first");
+
+
+            if (clickedElement.style.width.slice(0, -2) > 0 && otherElement.style.width.slice(0, -2) > 0) {
+                clickedElement.style.width = clickedElement.style.width.slice(0, -2) * 1.2 + "px";
+                otherElement.style.width = otherElement.style.width.slice(0, -2) * 0.8 + "px";
+
+                clickedElement.style.width = clickedElement.style.width.slice(0,-2);
+                otherElement.style.width = otherElement.style.width.slice(0,-2);
+
+                console.log(clickedElement.style.width.slice(0,-2));
+            }
+        }
+    </script>
+</body>
+</html>

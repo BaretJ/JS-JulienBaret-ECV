@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 4</title>
+</head>
+<body>
+   <!-- Coder un script qui permet d’ajouter un élément div avec un fond violet, une largeur de 100% et une hauteur de
+   300px. Créer un autre élément “h1” avec une couleur de texte blanche, en majuscule. Attacher l’élément H1 à l’
+   élément div. -->
+
+
+    <script>
+        const myElement = document.createElement("div");
+        document.body.appendChild(myElement);
+
+        myElement.setAttribute("id", "container");
+        myElement.style.background = "purple";
+        myElement.style.width = "100%";
+        myElement.style.height = "300px";
+
+        const myTitle = document.createElement("h1");
+        myTitle.innerHTML ="Mon Titre";
+        myTitle.style.color = "white";
+        myTitle.style.textTransform = "uppercase";
+
+        document.getElementById("container").appendChild(myTitle);
+    </script>
+</body>
+</html>
