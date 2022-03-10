@@ -19,9 +19,10 @@
 
     <script>
         const myElement = document.createElement("li");
-        myElement.innerHTML ="Mon Titre";
+        myElement.innerHTML ="Nouvel item";
         
-        document.getElementById("list").appendChild(myElement);
+        document.querySelector("#list li:nth-child(2)").remove();
+        document.querySelector("#list li:nth-child(1)").appendChild(myElement);
     </script>
 </body>
 </html>
