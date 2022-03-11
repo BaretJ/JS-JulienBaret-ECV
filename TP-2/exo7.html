@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
+    <body id="test">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exo 7</title>
 </head>
-<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Accueil rootpage-Accueil skin-vector-2022 action-view" style="background: #F1F1F1;"><div class="mw-page-container">
-	<a class="mw-jump-link" href="#content">Aller au contenu</a>
-	<div class="mw-page-container-inner ">
 
 <input
 	type="checkbox"
@@ -16,7 +14,7 @@
 	class="mw-checkbox-hack-checkbox"
 	checked>
 
-<header class="mw-header">
+<header class="mw-header" >
 	<label
 		id="mw-sidebar-button"
 		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
@@ -331,7 +329,42 @@
 <li><a href="/wiki/Sp%C3%A9cial:Index/Accueil" title="Spécial:Index/Accueil">Tous les articles commençant par «&#160;Accueil&#160;»</a></li>
 <li><a href="/wiki/Hospitalit%C3%A9" title="Hospitalité">Hospitalité</a></li>
 <li><a href="/wiki/Page_d%27accueil" title="Page d&#39;accueil">Page d'accueil</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw1442
+Cached time: 20220224080553
+Cache expiry: 1814400
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.081 seconds
+Real time usage: 0.109 seconds
+Preprocessor visited node count: 379/1000000
+Post‐expand include size: 5358/2097152 bytes
+Template argument size: 747/2097152 bytes
+Highest expansion depth: 9/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 444/5000000 bytes
+Lua time usage: 0.009/10.000 seconds
+Lua memory usage: 793236/52428800 bytes
+Number of Wikibase entities loaded: 1/400
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   89.188      1 -total
+ 38.39%   34.236      1 Modèle:Homonymie
+ 36.32%   32.392      1 Modèle:Bandeau_standard_pour_page_d'homonymie
+ 34.83%   31.066      1 Modèle:Méta_bandeau_de_note
+ 32.31%   28.819      1 Modèle:Autres_projets
+ 29.77%   26.552      1 Modèle:Méta_bandeau
+ 14.80%   13.197      1 Modèle:Semi-protection_étendue
+ 10.60%    9.458      1 Modèle:Icône_de_titre
+  6.24%    5.563      1 Modèle:,_etc.
+  3.73%    3.327      1 Modèle:Notice
+-->
 
+<!-- Saved in parser cache with key frwiki:pcache:idhash:3216891-0!canonical and timestamp 20220224080553 and revision id 189126974. Serialized with JSON.
+ -->
 </div><noscript><img src="//fr.wikipedia.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
 <div class="printfooter">Ce document provient de «&#160;<a dir="ltr" href="https://fr.wikipedia.org/w/index.php?title=Accueil&amp;oldid=189126974">https://fr.wikipedia.org/w/index.php?title=Accueil&amp;oldid=189126974</a>&#160;».</div></div>
 		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Cat%C3%A9gorie:Accueil" title="Catégorie:Accueil">Catégorie</a> : <ul><li><a href="/wiki/Cat%C3%A9gorie:Homonymie" title="Catégorie:Homonymie">Homonymie</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Catégorie cachée : <ul><li><a href="/wiki/Cat%C3%A9gorie:Page_en_semi-protection_%C3%A9tendue" title="Catégorie:Page en semi-protection étendue">Page en semi-protection étendue</a></li></ul></div></div>
@@ -382,12 +415,13 @@ Wikipedia® est une marque déposée de la <a href="https://wikimediafoundation.
 
 
 <script>
-	var el = document.body;
+   let test = document.getElementById("test");
 
-		// inclu les padding, border & scrollbar.
-		console.log(el.offsetWidth);
-		console.log(el.style.backgroundColor);
-		
+    test.addEventListener("click", function( event ) {
+    event.target.remove();
+    });
+
+
 </script>
 
 </body>
