@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 5</title>
+</head>
+
+<body></body>
+
+<script>
+    function tailleEcran(){
+        document.body.innerHTML = 
+            `<p><strong>Largeur de l'écran: </strong> ${window.innerWidth}px</p>
+            <p><strong>Hauteur de l'écran: </strong> ${window.innerHeight}px</p>`;
+    }
+
+   tailleEcran();
+   
+        // L'événement dresize se déclenche lorsque la vue du document (fenêtre) a été redimensionnée.
+        window.addEventListener('resize', function(event) {
+        tailleEcran();
+    });
+</script>
+
+</html>
