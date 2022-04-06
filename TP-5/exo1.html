@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 1</title>
+</head>
+<body>
+    <script>
+        function getHasTags(str){
+        return str.split(' ').sort(function(a,b){return b.length - a.length;}).map(function(e){return '#' + e}).slice(0,3)
+        }
+        console.log(getHasTags("How the avocado became the Fruit of the global Trade"));
+
+        console.log(getHasTags("Why You Will Probably Pay More for Your CHristmas Tree This Year"));
+
+        console.log(getHasTags("Hey parents, Surprise, Fruit Juice Is Not Fruit"));
+
+        console.log(getHasTags("Visualizing Science"));
+    </script>
+</body>
+</html>
