@@ -11,8 +11,6 @@
         const first = [0,2,4,6,8,8];
         const second = [1,2,3,4,5,6];
 
-        
-
         function arrayDiff(first, second){
             return first.filter(x => !second.includes(x)).concat(second.filter(x => !first.includes(x))).sort();}
 
