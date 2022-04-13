@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo1</title>
+</head>
+<body>
+    <!-- Créez une fonction qui prend en paramètre une chaîne de caractère, si la chaîne de caractère fait plus de 20
+    caractères, la promesse échoue, sinon la fonction renvoie true -->
+    <script>
+        function wordLength(word) {
+            return new Promise((successCallback, failureCallback) => {
+                if (word.length <= 20 ) {
+                    successCallback("True");
+                } else {
+                    failureCallback("False");
+                }
+            })
+        }
+
+        function successCallback(resultat) {
+           return true;
+        }
+
+        function failureCallback(erreur) {
+            return false; 
+        }
+
+        const promise = wordLength();
+        promise.then(successCallback, failureCallback);
+
+      
+        console.log(wordLength("test"));
+    </script>
+</body>
+</html>

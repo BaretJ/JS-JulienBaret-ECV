@@ -9,14 +9,12 @@
 <body>
     <script>
         function getHasTags(str){
-        return str.split(' ').sort(function(a,b){return b.length - a.length;}).map(function(e){return '#' + e}).slice(0,3)
+            return str.split(' ').sort(function(a,b){return b.length - a.length;}).slice(0,3).map(function(e){return '#' + e})
         }
+
         console.log(getHasTags("How the avocado became the Fruit of the global Trade"));
-
         console.log(getHasTags("Why You Will Probably Pay More for Your CHristmas Tree This Year"));
-
         console.log(getHasTags("Hey parents, Surprise, Fruit Juice Is Not Fruit"));
-
         console.log(getHasTags("Visualizing Science"));
     </script>
 </body>

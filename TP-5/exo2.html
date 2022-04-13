@@ -9,7 +9,13 @@
 <body>
     <script>
         const tab = [0, 2, 4, 6, 8, 8];
-        function removeDuplicate(tab){return tab.filter(function(ele , pos){return tab.indexOf(ele) == pos;})}
+        function removeDuplicate(tab){
+            return tab.filter(
+                function(ele , pos)
+                {
+                    return tab.indexOf(ele) == pos;
+                }
+            )}
         console.log(removeDuplicate(tab));
     </script>
 </body>

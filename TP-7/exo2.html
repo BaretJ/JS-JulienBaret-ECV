@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo2</title>
+</head>
+<body>
+    <!-- Créez une fonction qui prend en paramètre deux int, si la première variable est supérieure à la seconde, la
+    promesse renvoie la différence entre les deux variables, sinon elle échoue. -->
+    <script>
+
+        // function intValues(a, b) {
+        // return new Promise((successCallback, failureCallback) => {
+        //     console.log("C'est fait");
+        //     // réussir une fois sur deux
+        //     if (a > b) {
+        //     successCallback();
+        //     } else {
+        //     failureCallback();
+        //     }
+        // })
+        // }
+
+        // function successCallback(resultat){
+        //     console.log("test");
+        // }
+        // function failureCallback(resultat){
+        //     console.log("test2");
+        // }
+
+        // const promise = intValues();
+        // promise.then(failureCallback, successCallback,);
+
+        // intValues(2,1);
+
+
+            function execute(a, b) {
+                try{
+                    myPromise(a, b).then(res => console.log(res));
+                } catch(e) {
+                    console.log(e);
+                }
+            };
+
+            const myPromise = (a, b) => {
+                return new Promise((resolve, failure) => {
+                    if(a > b) {
+                        resolve(a - b);
+                    } else {
+                        failure("erreur : " + b + " est supérieur à " + a);
+                    }
+                });
+            }
+
+            execute(1,2);
+
+    </script>
+</body>
+</html>

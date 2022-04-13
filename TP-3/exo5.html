@@ -12,16 +12,16 @@
 <script>
     function tailleEcran(){
         document.body.innerHTML = 
-            `<p><strong>Largeur de l'écran: </strong> ${window.innerWidth}px</p>
-            <p><strong>Hauteur de l'écran: </strong> ${window.innerHeight}px</p>`;
+            `<p><strong>Largeur : </strong> ${window.innerWidth} px.</p>
+            <p><strong>Hauteur : </strong> ${window.innerHeight} px.</p>`;
     }
 
-   tailleEcran();
-   
         // L'événement dresize se déclenche lorsque la vue du document (fenêtre) a été redimensionnée.
         window.addEventListener('resize', function(event) {
         tailleEcran();
     });
+
+    tailleEcran();
 </script>
 
 </html>

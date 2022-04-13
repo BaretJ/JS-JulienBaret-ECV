@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo4</title>
+</head>
+<body>
+    <!-- Créez une fonction qui prend en paramètre une date de naissance d’une personne au format DD/MM/YYYY. 
+    Si la personne est mineure, la promesse échoue, sinon elle renvoie true -->
+    <script>
+        function wordLength(word) {
+            return new Promise((successCallback, failureCallback) => {
+                if (word.length <= 20 ) {
+                    successCallback("True");
+                } else {
+                    failureCallback("False");
+                }
+            })
+        }
+
+        function successCallback(resultat) {
+           return true;
+        }
+
+        function failureCallback(erreur) {
+            return false; 
+        }
+
+
+
+        const maDate = new Date().toLocaleDateString("fr");
+        parseInt(maDate);
+
+        function year(int){
+            let number = int.split("/").slice(2).join();
+            console.log(number);
+        }
+    
+
+        
+
+
+        function execute(a, b, c) {
+                try{
+                    myPromise(a, b, c).then(res => console.log(res));
+                } catch(e) {
+                    console.log(e);
+                }
+            };
+
+            const myPromise = (a, b, c) => {
+                return new Promise((resolve, failure) => {
+                    if( (c - 18) < year(maDate) ) {
+                        resolve("Il y a une erreur");
+                    } else {
+                        failure("Tu es mineur");
+                    }
+                });
+            }
+
+
+
+
+
+
+
+           enchainement().then(function(result) {
+           wordLength();
+            })
+            .then(function(newResult) {
+                year(maDate);
+            })
+            .then(function(finalResult) {
+                execute(24, 08, 1998);
+            })
+        .catch(failureCallback);
+
+    </script>
+</body>
+</html>
