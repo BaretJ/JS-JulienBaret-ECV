@@ -19,15 +19,20 @@
         };
 
 
-        function merge(...arr){
-            return arr.reduce(({},acc, val) => {    
-            return { ...acc, ...val  };
-        }, {});
+        const merge = (target, source) => Object.entries(source).reduce((o, [k, v]) => {
+        if (k in o) {
+            if (!Array.isArray(o[k])) o[k] = [o[k]];
+            [].concat(v).forEach(item => {
+                if (!o[k].includes(item)) o[k].push(item);
+            });
+        } else {
+            o[k] = v;
         }
-
-
-        console.log(merge(object, other));
-
+        return o;
+        }, target);
+        
+        result = [object, other].reduce(merge, {});
+        console.log(result);
  
     </script>
 </body>
